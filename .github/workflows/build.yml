@@ -1,6 +1,13 @@
 name: Build Image
 
 on:
+  push:
+    branches:
+      - main   # Runs when you push to main branch
+  pull_request:
+    branches:
+      - main   # Runs on PRs targeting main
+
 
   workflow_dispatch:
     inputs:
